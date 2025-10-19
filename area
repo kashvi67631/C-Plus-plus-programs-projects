@@ -1,0 +1,11 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    //swap two variables 
+    float pi=3.14;
+    float r;
+    cout<<"Enter the radius ";cin>>r;
+    cout<<"\nArea of circle is "<<pi*pow(r,2);
+    return 0;
+}
