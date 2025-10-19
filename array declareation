@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main(){
+    //input n number of arrays and enter the reverse order of the array 
+    int n;cout<<"ENter the number of element sto be enteres:";cin>>n;
+    int arr[n];
+    for (int i=0;i<n;i++){
+        cout<<"\nEnter the "<<i<<" element :";cin>>arr[i];
+    }
+    for(int j=0;j<n;j++){
+        cout<<arr[j]<<"\n";
+    }
+}
