@@ -1,0 +1,13 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main(){
+    //factorial of a number
+    int a; cout<<"Enter a number to get factorial: ";cin>>a;
+    int fact=1;
+    for (int i=a;i>=1;i--){
+        fact=fact*i;
+    }
+    cout<<fact;
+    return 0;
+}
