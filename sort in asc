@@ -1,0 +1,23 @@
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main(){
+    //lambda to sort array in asscending order
+    int arr[5]={4,3,6,2,8};
+    auto sort=[](int len,int *arr){
+        for (int i=0;i<len-1;i++){
+            for ( int j=0;j<len-i-1;j++){
+                if (arr[j]>arr[j+1]){
+                    int el=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=el;
+                }
+            }
+        }
+    };
+    sort(5,arr);
+    for(int i=0;i<5;i++){
+        cout<<arr[i]<<" ";
+    }
+}
