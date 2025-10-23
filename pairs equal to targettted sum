@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+//Find all pairs whose sum equals a given number.
+int main(){
+    int sum;cout<<"Enter the sum: ";cin>>sum;cout<<"\n";int arr[5]={1,2,3,4,5};int len=5;
+    for ( int j=0;j<len;j++){
+        for(int i=0;i<j;i++){
+            if(arr[i]+arr[j]==sum){
+                cout<<"["<<arr[i]<<','<<arr[j]<<"]";
+            }
+        }
+    }
+    
+}
