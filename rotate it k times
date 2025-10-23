@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+//Rotate an array by k positions (no extra array).
+int main(){
+    int k;cout<<"Enter the number of times u want to rotate the array: ";cin>>k;cout<<"\n";int arr[5]={1,2,3,4,5};int len=5;
+    for ( int j=0;j<k;j++){
+        int temp = arr[len - 1];
+    for (int i = len - 1; i > 0; --i) {
+        arr[i] = arr[i - 1];
+    }arr[0] = temp; 
+    cout<<"[";
+        for(int p=0;p<len;p++){
+        cout<<" "<<arr[p];
+    }
+    cout<<"]";
+    cout<<"\n";
+    }
+    
+}
