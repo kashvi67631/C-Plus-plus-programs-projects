@@ -1,0 +1,70 @@
+//3. Write a program to calculate average marks of students using array of structures.
+#include <iostream>
+using namespace std;
+struct students{
+        string name;
+        int roll;
+        int marks;
+    };
+//Pass structure by reference to a function to update details.
+void update(students records[],int total){
+    int n;cout<<"Enter the roll number of the student to be updated";cin>>n;
+    int l;cout<<"Kindly eneter the total number of records stored";cin>>l;
+    cout<<"\nWhat you want to update ?";
+    cout<<"\n1.Name";cout<<"\n2.Roll Number";cout<<"\n3.Marks";
+    int ch;cin>>ch;bool found=false;
+    for (int i=0;i<l;i++){
+        if (records[i].roll==n){
+            found=true;
+            switch (ch) {
+                case 1: {
+                    cout << "Enter the new name: ";
+                    cin >> records[i].name;
+                    break;
+                }
+                case 2: {
+                    cout << "Enter the new roll number: ";
+                    cin >> records[i].roll;
+                    break;
+                }
+                case 3: {
+                    cout << "Enter the new marks: ";
+                    cin >> records[i].marks;
+                    break;
+                }
+                default:
+                    cout << "Invalid choice!";
+            }
+            cout << "\nRecord updated successfully!\n";
+            break;
+        }
+        if (!found) {
+        cout << "No student found with roll number " << n << ".\n";
+    }
+}
+}
+int main() {
+    int n;cout<<"Enter the number of records to be added in the data : ";cin>>n;
+    students records[n];
+    for ( int i=0 ; i<n ; i++){
+        cout<<"Enter the name of the student : ";
+        cin>>records[i].name;
+        cout<<"\nEnter the roll number of the student : ";
+        cin>>records[i].roll;
+        cout<<"\nEnter the marks of the student : ";
+        cin>>records[i].marks;
+    }
+    double avg=0,sum=0;
+    for(int j=0;j<n;j++){
+        sum=sum+records[j].marks;
+    }
+    avg=sum/n;
+    cout<<"\nThe average marks of the students are "<<avg<<".";
+    update (records,n);
+    for (int i = 0; i < n; i++) {
+        cout << "Name: " << records[i].name
+             << ", Roll: " << records[i].roll
+             << ", Marks: " << records[i].marks << endl;
+    }
+    return 0;
+}
